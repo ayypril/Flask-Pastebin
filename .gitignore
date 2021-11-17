@@ -1,0 +1,5 @@
+/.idea/
+config.py
+creds.json
+.DS_Store
+/__pycache__/

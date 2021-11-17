@@ -1,0 +1,15 @@
+class Config(object):
+    PASTE_LENGTH = 12
+
+class ProductionConfig(Config):
+    SEND_FILE_MAX_AGE_DEFAULT = 31560000
+    APP_ENV = 'gcp'
+    DB_REFERENCE = '/prod_pastes'
+    DATABASE_URL = 'https://xxxxxxxxxxxxxxxx.firebaseio.com/'
+
+class DevelopmentConfig(Config):
+    SEND_FILE_MAX_AGE_DEFAULT = 0
+    APP_ENV = 'local'
+    CREDS_FILE = 'my_creds.json'
+    DB_REFERENCE = '/development_pastes'
+    DATABASE_URL = 'https://xxxxxxxxxxxxxx.firebaseio.com/'
